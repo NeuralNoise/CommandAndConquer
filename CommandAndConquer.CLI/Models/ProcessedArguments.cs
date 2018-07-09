@@ -7,6 +7,7 @@ namespace CommandAndConquer.CLI.Models
         public string Controller { get; set; }
         public string Command { get; set; }
         public List<CommandLineArgument> Arguments { get; set; }
+        public List<string> Args { get; set; }
         public bool IsHelpCall { get; set; }
 
         public ProcessedArguments()

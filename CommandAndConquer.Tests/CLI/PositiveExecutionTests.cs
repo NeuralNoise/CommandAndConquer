@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using CommandAndConquer.CLI.Core;
+using CommandAndConquer.Tests.Models;
 using NUnit.Framework;
 
 namespace CommandAndConquer.Tests.CLI
@@ -173,6 +174,24 @@ namespace CommandAndConquer.Tests.CLI
                 "EnumOne"
             };
             Processor.ProcessArguments(new[] { "execute", "nonstatic", $"{argPre}sample", "EnumOne" });
+            var temp = mockConsole.ToString();
+            var expectedString = ConvertConsoleLinesToString(consoleLines);
+            Assert.AreEqual(expectedString, temp);
+        }
+
+        [Test]
+        public void AbleToCallCommandWithoutSpecifyingParamNamesIfOrderIsCorrect()
+        {
+            var firstNum = 0;
+            var secondNum = "three";
+            var thing = SampleEnum.EnumOne;
+
+            mockConsole.Clear();
+            var consoleLines = new List<string>
+            {
+                $"[{firstNum}] {secondNum} {thing}"
+            };
+            Processor.ProcessArguments(new[] { "execute", "paramOrder", $"{firstNum}", $"{secondNum}", $"{thing}" });
             var temp = mockConsole.ToString();
             var expectedString = ConvertConsoleLinesToString(consoleLines);
             Assert.AreEqual(expectedString, temp);

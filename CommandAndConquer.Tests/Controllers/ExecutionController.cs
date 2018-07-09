@@ -72,6 +72,12 @@ namespace CommandAndConquer.Tests.Controllers
             PerformAsyncStuff(firstNum, secondNum).Wait();
         }
 
+        [CliCommand("paramOrder", "performs long running async tasks")]
+        public static void TestingParamOrder(int firstNum, string secondNum, SampleEnum thing)
+        {
+            Console.WriteLine($"[{firstNum}] {secondNum} {thing}");
+        }
+
         private static async Task<bool> PerformAsyncStuff(int firstNum, int secondNum)
         {
             await LoopingSomeLongRunningThing(firstNum);

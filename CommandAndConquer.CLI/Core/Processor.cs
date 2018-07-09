@@ -100,7 +100,7 @@ namespace CommandAndConquer.CLI.Core
         }
 
         private static ProcessedArguments ProcessArgs(IReadOnlyList<string> args)
-        {;
+        {
             var processedArguments = new ProcessedArguments();
 
             if (args.Count == 0) return processedArguments;
@@ -113,6 +113,7 @@ namespace CommandAndConquer.CLI.Core
             {
                 var argsList = args.ToList();
                 argsList.RemoveRange(0, 2);
+                processedArguments.Args = argsList;
                 processedArguments.Arguments = SetArguments(argsList).ToList();
             }
 
