@@ -3,17 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.CLI", "CommandAndConquer.CLI\CommandAndConquer.CLI.csproj", "{5D0C7473-D01F-4824-A75B-49C7FE90F4F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.Framework.Tests", "Tests\Framework\CommandAndConquer.Tests\CommandAndConquer.Framework.Tests.csproj", "{9BE46BDA-B098-4AF1-8549-E4152F36564C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.Tests", "CommandAndConquer.Tests\CommandAndConquer.Tests.csproj", "{9BE46BDA-B098-4AF1-8549-E4152F36564C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.CLI.Template", "CommandAndConquer.CLI.Template\CommandAndConquer.CLI.Template.csproj", "{B05677F9-0691-41CC-BA95-4DED2078B4D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.CLI.Template", "Templates\CommandAndConquer.CLI.Template\CommandAndConquer.CLI.Template.csproj", "{B05677F9-0691-41CC-BA95-4DED2078B4D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{4E50E530-8317-41F4-B709-578B25F28316}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.CLI.VSIX", "CommandAndConquer.CLI.VSIX\CommandAndConquer.CLI.VSIX.csproj", "{BC3AEEC8-5F4D-48E2-83F5-E48F6E57D26D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.CLI.VSIX", "Templates\CommandAndConquer.CLI.VSIX\CommandAndConquer.CLI.VSIX.csproj", "{BC3AEEC8-5F4D-48E2-83F5-E48F6E57D26D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.TestCLI", "CommandAndConquer.TestCLI\CommandAndConquer.TestCLI.csproj", "{865A53AF-93C1-42A8-82EB-CAF665C73A62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandAndConquer.Framework.TestCLI", "Tests\Framework\CommandAndConquer.TestCLI\CommandAndConquer.Framework.TestCLI.csproj", "{865A53AF-93C1-42A8-82EB-CAF665C73A62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandAndConquer.CLI", "CommandAndConquer.CLI\CommandAndConquer.CLI.csproj", "{4E96B55A-512A-48F5-B1BF-BB6900FC4B0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{613CD715-C9DE-416B-9CFD-42273CC38A9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F315A1E8-4343-418A-A709-E39A6FF8964C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{5A4F53AE-A836-4404-99EF-64B9B2F138DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5D0C7473-D01F-4824-A75B-49C7FE90F4F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D0C7473-D01F-4824-A75B-49C7FE90F4F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D0C7473-D01F-4824-A75B-49C7FE90F4F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D0C7473-D01F-4824-A75B-49C7FE90F4F1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9BE46BDA-B098-4AF1-8549-E4152F36564C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9BE46BDA-B098-4AF1-8549-E4152F36564C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BE46BDA-B098-4AF1-8549-E4152F36564C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,13 +43,21 @@ Global
 		{865A53AF-93C1-42A8-82EB-CAF665C73A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865A53AF-93C1-42A8-82EB-CAF665C73A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{865A53AF-93C1-42A8-82EB-CAF665C73A62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E96B55A-512A-48F5-B1BF-BB6900FC4B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E96B55A-512A-48F5-B1BF-BB6900FC4B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E96B55A-512A-48F5-B1BF-BB6900FC4B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E96B55A-512A-48F5-B1BF-BB6900FC4B0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{9BE46BDA-B098-4AF1-8549-E4152F36564C} = {5A4F53AE-A836-4404-99EF-64B9B2F138DC}
 		{B05677F9-0691-41CC-BA95-4DED2078B4D7} = {4E50E530-8317-41F4-B709-578B25F28316}
 		{BC3AEEC8-5F4D-48E2-83F5-E48F6E57D26D} = {4E50E530-8317-41F4-B709-578B25F28316}
+		{865A53AF-93C1-42A8-82EB-CAF665C73A62} = {5A4F53AE-A836-4404-99EF-64B9B2F138DC}
+		{F315A1E8-4343-418A-A709-E39A6FF8964C} = {613CD715-C9DE-416B-9CFD-42273CC38A9C}
+		{5A4F53AE-A836-4404-99EF-64B9B2F138DC} = {613CD715-C9DE-416B-9CFD-42273CC38A9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56B315A8-299A-4713-A074-90C933D0AD72}
